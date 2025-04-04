@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web ITH - ROBOTICA S-9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #FFE4E1;
+            padding: 10px;
+            color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 50px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav a {
+            color: rgb(3, 3, 3);
+            text-decoration: none;
+        }
+
+        .hero {
+            background: linear-gradient(90deg, rgb(245, 250, 158) 0%, rgb(129, 214, 233) 35%, rgba(247, 239, 134, 0.89) 100%);
+            padding: 50px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+
+        .iconos {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #000000;
+        }
+
+        .iconos div a {
+            text-decoration: none;
+            color: #FFE4C4;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        footer {
+            background-color: #FFE4E1;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        form input, form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: #004080;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #002850;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src = "logo ith.png" alt="Logo ITH" style="width: 100px; height: auto;"> 
+          
+        </div>
+        <nav>
+            <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="comidatipica.html" title="ir a...">comida tipica</a></li>
+            <li><a href="BEBIDASTIPICASss.HTML"  title="ir...a">bebidas tipicas</a></li>
+            <li><a href="CONTACTANOS.HTML"  title="ir a...">Contactanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Fondo de la página principal -->
+    <section id="home" class="hero active">
+        <h2>Bienvenido a nuestro sitio web
+            sobre comida tipica de Honduras
+        </h2>
+        <div class="logo">
+            <img src = "bandera.png" alt="Logo bandera" style="width: 100px; height: auto;"> 
+          
+        </div>
+    </section>
+
+    <!-- Íconos con nombres -->
+    <section class="iconos">
+        <div><a href="#" onclick="mostrarSeccion('INICIO')">INICIO</a></div>
+    </section>
+
+    <!-- Secciones de contenido -->
+    <section id="INICIO">
+        <h1>Comida Típica de Honduras y sus Ventajas</h1>
+    <p>La gastronomía hondureña es un reflejo de la diversidad cultural y geográfica del país. Con influencias indígenas, africanas y españolas, la comida de Honduras es rica, sabrosa y variada. Algunos de los platos más representativos de la comida típica hondureña son:</p>
+    
+    <ul>
+        <li><strong>Baleadas:</strong> Una de las comidas más populares, que consiste en una tortilla de harina rellena de frijoles, queso, crema y a veces carne o aguacate.</li>
+        <li><strong>Pollo con Tajadas:</strong> Un plato tradicional de pollo frito acompañado de tajadas de plátano verde, arroz y ensalada.</li>
+        <li><strong>Tamales:</strong> Hechos de masa de maíz, rellenos con carne, verduras y especias, cocidos en hojas de plátano.</li>
+        <li><strong>Sopa de Caracol:</strong> Un delicioso caldo de mariscos con caracol, hierbas y vegetales, muy popular en las zonas costeras.</li>
+        <li><strong>Pupusas:</strong> Aunque más típicas de El Salvador, también son muy comunes en Honduras, son tortillas gruesas rellenas con frijoles, queso, carne o chicharrón.</li>
+    </ul>
+
+    <h2>Ventajas de la Comida Típica Hondureña</h2>
+    <p>Además de su sabor y frescura, la comida típica de Honduras tiene varias ventajas que la hacen única y atractiva para los turistas:</p>
+
+    <ul>
+        <li><strong>Fusión de Sabores:</strong> La gastronomía hondureña es una mezcla de ingredientes autóctonos y técnicas culinarias de diferentes culturas, lo que genera una variedad de sabores únicos que no se encuentran fácilmente en otros lugares.</li>
+        
+        <li><strong>Uso de Ingredientes Frescos y Naturales:</strong> En la mayoría de los platos, se utilizan productos frescos y locales, como frutas tropicales, mariscos del Caribe y del Pacífico, así como maíz, que es un ingrediente básico en la dieta hondureña.</li>
+        
+        <li><strong>Accesibilidad:</strong> Los precios de la comida son bastante accesibles en Honduras, lo que permite a los turistas disfrutar de platos deliciosos sin que afecten demasiado su presupuesto. Las comidas típicas son comunes tanto en restaurantes como en puestos callejeros.</li>
+        
+        <li><strong>Comida para Todos los Gustos:</strong> La comida de Honduras es muy variada y ofrece opciones tanto para los amantes de la carne como para los vegetarianos. Las baleadas y las pupusas, por ejemplo, pueden prepararse con diferentes rellenos, adaptándose a todos los gustos.</li>
+        
+        <li><strong>Ricas Tradiciones Culinarias:</strong> Comer en Honduras no solo es disfrutar de buenos sabores, sino también vivir una experiencia cultural. Muchos platos están ligados a celebraciones y festividades tradicionales, lo que brinda una conexión más profunda con el país.</li>
+        
+        <li><strong>Fácil de Encontrar:</strong> Desde mercados locales hasta restaurantes familiares, la comida típica hondureña es fácil de encontrar en todo el país, lo que hace que la experiencia culinaria sea accesible para cualquier visitante.</li>
+    </ul>
+
+    <p>La comida típica de Honduras no solo es deliciosa, sino que también es una forma de conocer mejor la cultura, las tradiciones y la gente del país. Sin duda, es una de las grandes razones para visitar este hermoso destino.</p>
+            
+    <div class="logo">
+        <img src = "comidas tipicas.jpg" alt="Logo bandera" style="width: 100px; height: auto;"> 
+      
+    </div>
+    
+    <!-- Link al video -->
+    <a href="" target="_blank"></a>
+    </section>
+
+
+
+    <section id="aplicaciones">
+        <h1>Aplicaciones</h1>
+        <p>Aplicaciones desarrolladas para facilitar tus proyectos.</p>
+    </section>
+
+   
+
+    <section id="contacto">
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p><strong>Tel: 8948-9991</strong></p>
+        <p><strong>Correo: daril.guevara@tecnico-honduras.com</strong></p>
+        <p><a href="#" onclick="mostrarSeccion('contacto')">Contacto</a></p>
+    </footer>
+
+    <script>
+        function mostrarSeccion(seccionId) {
+            const secciones = document.querySelectorAll("section");
+            secciones.forEach(seccion => seccion.classList.remove("active"));
+
+            document.getElementById(seccionId).classList.add("active");
+        }
+    </script>
+</body>
+</html>

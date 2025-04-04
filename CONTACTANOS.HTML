@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contáctanos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e5ddd5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .chat-container {
+            width: 400px;
+            height: 600px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #075e54;
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        .messages {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+            background-color: #e5ddd5;
+        }
+
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            width: fit-content;
+            max-width: 80%;
+        }
+
+        .sent {
+            background-color: #dcf8c6;
+            align-self: flex-end;
+        }
+
+        .received {
+            background-color: white;
+            align-self: flex-start;
+        }
+
+        .input-container {
+            display: flex;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ddd;
+        }
+
+        .input-container input {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        .input-container button {
+            margin-left: 10px;
+            background-color: #25d366;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .input-container button:hover {
+            background-color: #128c7e;
+        }
+    </style>
+</head>
+<body style="background-color: lightblue;">
+    <nav>
+        <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="comidatipica.html" title="ir a...">comida tipica</a></li>
+        <li><a href="BEBIDASTIPICASss.HTML"  title="ir...a">bebidas tipicas</a></li>
+        <li><a href="CONTACTANOS.HTML"  title="ir a...">Contactanos</a></li>
+        </ul>
+    </nav>
+    <div class="chat-container">
+        <div class="header">
+            <h2>Contáctanos</h2>
+        </div>
+
+        <div class="messages" id="messages">
+            <div class="message received">Mandanos un mensaje o un correo si nececitas probar nuestros ricos 
+                platillos tipicos de honduras  </div>
+        </div>
+
+        <div class="input-container">
+            <input type="text" id="messageInput" placeholder="Escribe tu mensaje...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const messages = document.getElementById('messages');
+            const messageInput = document.getElementById('messageInput');
+            const messageText = messageInput.value.trim();
+
+            if (messageText !== '') {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message', 'sent');
+                messageElement.textContent = messageText;
+
+                messages.appendChild(messageElement);
+                messages.scrollTop = messages.scrollHeight;
+
+                messageInput.value = '';
+            }
+        }
+    </script>
+     <!-- Sección de Contacto -->
+     <section>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+</body>
+</html>
